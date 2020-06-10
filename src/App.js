@@ -6,7 +6,7 @@ import {
   Switch,
 } from "react-router-dom";
 import Users from "./user/pages/Users";
-import NewPlace from "./places/pages/NewPlace";
+import NewPlaylist from "./playlist/pages/NewPlaylist";
 
 const App = () => {
   return (
@@ -15,8 +15,8 @@ const App = () => {
         <Route path="/" exact>
           <Users />
         </Route>
-        <Route path="/places/new" exact>
-          <NewPlace />
+        <Route path="/playlist/new" exact>
+          <NewPlaylist />
         </Route>
         <Redirect to="/" />
       </Switch>
