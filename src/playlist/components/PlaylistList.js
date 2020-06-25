@@ -17,7 +17,7 @@ const PlaylistList = (props) => {
 
   return (
     <ul className="playlist-list">
-      {props.item.map((playlist) => (
+      {props.items.map((playlist) => (
         <PlaylistItem
           key={playlist.id}
           id={playlist.id}
