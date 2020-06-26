@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import PlaylistList from '../components/PlaylistList';
 
 const DUMMY_PLAYLIST = [
@@ -21,7 +22,9 @@ const DUMMY_PLAYLIST = [
 
 
 const UserPlaylist = () =>{
-  return <PlaylistList items={DUMMY_PLAYLIST} />;
+  const userId = useParams().userId;
+  const loadedPlaylist = DUMMY_PLAYLIST.filter(playlist => playlist.creator === userId);
+  return <PlaylistList items={loadedPlaylist} />;
 
 };
 
